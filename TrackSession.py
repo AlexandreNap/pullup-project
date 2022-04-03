@@ -42,7 +42,7 @@ vanilla_transform = torchvision.transforms.Compose([
     torchvision.transforms.Resize(224),
     torchvision.transforms.ToTensor(),
     torchvision.transforms.Normalize(norm_mean, norm_std)])
-model = init_model("output/model/model-score0.96-f1_10.9-f1_20.99.pt")
+model = init_model("model/model_classif-trained_epoch3_loss0.02.pt")#"output/model/model-score0.96-f1_10.9-f1_20.99.pt")
 if torch.cuda.is_available():
     device = torch.device("cuda")
 else:
